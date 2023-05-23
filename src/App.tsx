@@ -1,7 +1,10 @@
-import Alert from './components/Alert'
+import Alert from './components/Alert/Alert'
+import useAlertContainer from './components/Alert/AlertContainer'
+
 import Badge from './components/Badge'
 // arquivo para testar os componentes sendo desenvolvidos
 function App() {
+  const { AlertContainer, showAlert } = useAlertContainer()
   return (
     <div className="p-4">
       <h1>Alert</h1>
@@ -68,6 +71,12 @@ function App() {
           </a>
         </div>
       </div>
+      <AlertContainer />
+      <button
+        onClick={() => showAlert('alerta gerado pelo butao', 'primary', 3000)}
+      >
+        BUTAO AQUI
+      </button>
     </div>
   )
 }

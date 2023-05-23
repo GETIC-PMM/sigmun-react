@@ -1,18 +1,6 @@
 import { forwardRef } from 'react'
-import { classList } from '../utils'
-
-export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
-  type?:
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'danger'
-    | 'warning'
-    | 'info'
-    | 'light'
-    | 'dark'
-  enableClose?: boolean
-}
+import { classList } from '../../utils'
+import { AlertProps } from './types'
 
 const Alert = forwardRef(
   ({ enableClose = false, type = 'primary', ...props }: AlertProps) => {
