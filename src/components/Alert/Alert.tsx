@@ -6,6 +6,7 @@ const Alert = forwardRef(
   ({ enableClose = false, type = 'primary', ...props }: AlertProps) => {
     return (
       <div
+        {...props}
         className={classList(`alert alert-${type}`, {
           'alert-dismissible fade show': enableClose,
         })}
