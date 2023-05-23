@@ -1,7 +1,7 @@
 import Alert from './components/Alert/Alert'
 import useAlertContainer from './components/Alert/AlertContainer'
 
-import Badge from './components/Badge'
+import Badge from './components/Badge/Badge'
 // arquivo para testar os componentes sendo desenvolvidos
 function App() {
   const { AlertContainer, showAlert } = useAlertContainer()

@@ -1,31 +1,9 @@
 import { forwardRef } from 'react'
-import { classList } from '../utils'
-
-export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
-  type?:
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'danger'
-    | 'warning'
-    | 'info'
-    | 'light'
-    | 'dark'
-  text?: boolean
-  positioned?: boolean
-  noContent?: boolean
-  badgeFor?: 'button' | 'buttonDetail' | 'buttonPositioned' | 'icon' | 'text'
-}
+import { classList } from '../../utils'
+import { BadgeProps } from './types'
 
 const Badge = forwardRef(
-  ({
-    text = false,
-    type = 'primary',
-    positioned = false,
-    noContent = false,
-    badgeFor,
-    ...props
-  }: BadgeProps) => {
+  ({ type = 'primary', badgeFor, ...props }: BadgeProps) => {
     return (
       <span
         className={classList(` bg-${type}`, {
@@ -35,7 +13,8 @@ const Badge = forwardRef(
             badgeFor == 'buttonDetail',
           'position-absolute bottom-0 start-75 translate-middle p-1 bg-danger border border-light rounded-circle':
             badgeFor == 'icon',
-          'badge sdsa': badgeFor == 'button' || badgeFor == 'text',
+          'mx-1': badgeFor == 'button',
+          'badge ': badgeFor == 'button' || badgeFor == 'text',
         })}
       >
         <span
