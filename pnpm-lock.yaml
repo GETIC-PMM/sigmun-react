@@ -9,7 +9,7 @@ dependencies:
     version: 18.2.0(react@18.2.0)
   sigmun-hero:
     specifier: github:heronildesjr/sigmun-hero
-    version: github.com/heronildesjr/sigmun-hero/27f71aa3d062776c7cfaea953eb9929cb33914f2(@popperjs/core@2.11.7)
+    version: github.com/heronildesjr/sigmun-hero/e8a523f33886a6c8778f768c2caab9804e7cb922(@popperjs/core@2.11.7)
 
 devDependencies:
   '@types/react':
@@ -1776,9 +1776,9 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  github.com/heronildesjr/sigmun-hero/27f71aa3d062776c7cfaea953eb9929cb33914f2(@popperjs/core@2.11.7):
-    resolution: {tarball: https://codeload.github.com/heronildesjr/sigmun-hero/tar.gz/27f71aa3d062776c7cfaea953eb9929cb33914f2}
-    id: github.com/heronildesjr/sigmun-hero/27f71aa3d062776c7cfaea953eb9929cb33914f2
+  github.com/heronildesjr/sigmun-hero/e8a523f33886a6c8778f768c2caab9804e7cb922(@popperjs/core@2.11.7):
+    resolution: {tarball: https://codeload.github.com/heronildesjr/sigmun-hero/tar.gz/e8a523f33886a6c8778f768c2caab9804e7cb922}
+    id: github.com/heronildesjr/sigmun-hero/e8a523f33886a6c8778f768c2caab9804e7cb922
     name: sigmun-hero
     version: 0.0.1
     dependencies:

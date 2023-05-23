@@ -1,4 +1,3 @@
-import { sigmun } from '../../../node_modules/sigmun-hero/dist/js/sigmun'
 import { AlertType } from './types'
 import { forwardRef } from 'react'
 
@@ -15,6 +14,8 @@ const useAlertContainer = () => {
   )
 
   const showAlert = (message: string, type: AlertType, duration: number) => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     sigmun.functions.showAlert(message, type, 'body', duration)
   }
 
