@@ -8,7 +8,7 @@ export type AlertType =
   | 'light'
   | 'dark'
 
-export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
+export type AlertProps = {
   type?: AlertType
   enableClose?: boolean
-}
+} & React.HTMLAttributes<HTMLDivElement>

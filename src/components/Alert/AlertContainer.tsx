@@ -1,12 +1,21 @@
-import { sigmun } from 'sigmun-hero/dist/js/sigmun'
 import { AlertType } from './types'
+import { forwardRef } from 'react'
 
 const useAlertContainer = () => {
-  const AlertContainer = () => {
-    return <div className="alert-container"></div>
-  }
+  const AlertContainer = forwardRef(
+    (props: React.HTMLAttributes<HTMLDivElement>) => {
+      const { children, className } = props
+      return (
+        <div className={`alert-container ${className}`} {...props}>
+          {children}
+        </div>
+      )
+    },
+  )
 
   const showAlert = (message: string, type: AlertType, duration: number) => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     sigmun.functions.showAlert(message, type, 'body', duration)
   }
 
