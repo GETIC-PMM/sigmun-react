@@ -2,6 +2,7 @@ import Alert from './components/Alert/Alert'
 import useAlertContainer from './components/Alert/AlertContainer'
 
 import Badge from './components/Badge/Badge'
+import ButtonGroup from './components/ButtonGroup/ButtonGroup'
 // arquivo para testar os componentes sendo desenvolvidos
 function App() {
   const { AlertContainer, showAlert } = useAlertContainer()
@@ -14,7 +15,9 @@ function App() {
       <Alert type="info" enableClose={false}>
         Esse aq nao da
       </Alert>
+
       <hr />
+
       <h1>Badge</h1>
       <div className="d-flex flex-column gap-4">
         <div>
@@ -29,12 +32,44 @@ function App() {
 
         <div>
           <div>Posicionado</div>
-          <button type="button" className="btn btn-primary position-relative">
-            Notificações
-            <Badge badgeFor="buttonPositioned" type="danger">
-              99+
-            </Badge>
-          </button>
+          <div className="d-flex gap-5">
+            <button type="button" className="btn btn-primary position-relative">
+              Notificações
+              <Badge badgeFor="buttonPositioned" type="danger">
+                99+
+              </Badge>
+            </button>
+            <button type="button" className="btn btn-primary position-relative">
+              Notificações
+              <Badge
+                bgPosition="top-left"
+                badgeFor="buttonPositioned"
+                type="danger"
+              >
+                99+
+              </Badge>
+            </button>
+            <button type="button" className="btn btn-primary position-relative">
+              Notificações
+              <Badge
+                bgPosition="bottom-right"
+                badgeFor="buttonPositioned"
+                type="danger"
+              >
+                99+
+              </Badge>
+            </button>
+            <button type="button" className="btn btn-primary position-relative">
+              Notificações
+              <Badge
+                bgPosition="bottom-left"
+                badgeFor="buttonPositioned"
+                type="danger"
+              >
+                99+
+              </Badge>
+            </button>
+          </div>
         </div>
 
         <div>
@@ -71,6 +106,17 @@ function App() {
           </a>
         </div>
       </div>
+
+      <hr />
+
+      <h1>Button Group</h1>
+      <ButtonGroup>
+        <button className="btn btn-primary">oi</button>
+        <button className="btn btn-primary">oi</button>
+      </ButtonGroup>
+
+      <hr />
+
       <AlertContainer />
       <button
         onClick={() => showAlert('alerta gerado pelo butao', 'primary', 3000)}

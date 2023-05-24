@@ -9,4 +9,5 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
     | 'light'
     | 'dark'
   badgeFor?: 'button' | 'buttonDetail' | 'buttonPositioned' | 'icon' | 'text'
+  bgPosition?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
 }

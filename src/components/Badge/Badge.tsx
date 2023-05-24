@@ -3,18 +3,30 @@ import { classList } from '../../utils'
 import { BadgeProps } from './types'
 
 const Badge = forwardRef(
-  ({ type = 'primary', badgeFor, ...props }: BadgeProps) => {
+  ({
+    type = 'primary',
+    badgeFor,
+    bgPosition = 'top-right',
+    ...props
+  }: BadgeProps) => {
+    const canBePositioned =
+      badgeFor == 'buttonDetail' || badgeFor == 'buttonPositioned'
+
     return (
       <span
         className={classList(` bg-${type}`, {
-          'badge position-absolute top-0 start-100 translate-middle rounded-pill':
+          'badge position-absolute translate-middle rounded-pill':
             badgeFor == 'buttonPositioned',
-          'badge position-absolute top-0 start-100 translate-middle border border-light rounded-circle p-2':
+          'badge position-absolute translate-middle border border-light rounded-circle p-2':
             badgeFor == 'buttonDetail',
-          'position-absolute bottom-0 start-75 translate-middle p-1 bg-danger border border-light rounded-circle':
+          'position-absolute bottom-0 start-75 translate-middle p-1 border border-light rounded-circle':
             badgeFor == 'icon',
           'mx-1': badgeFor == 'button',
           'badge ': badgeFor == 'button' || badgeFor == 'text',
+          'top-0 start-0': bgPosition == 'top-left' && canBePositioned,
+          'top-0 start-100': bgPosition == 'top-right' && canBePositioned,
+          'top-100 start-0': bgPosition == 'bottom-left' && canBePositioned,
+          'top-100 start-10': bgPosition == 'bottom-right' && canBePositioned,
         })}
       >
         <span
