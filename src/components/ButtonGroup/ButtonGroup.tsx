@@ -1,9 +1,14 @@
 import { forwardRef } from 'react'
 import { classList } from '../../utils'
+import { ButtonGroupProps } from './types'
 
 const ButtonGroup = forwardRef(
-  ({ ...props }: React.HTMLAttributes<HTMLDivElement>) => {
-    return <div className={classList(`btn-group`)}>{props.children}</div>
+  ({ vertical = false, ...props }: ButtonGroupProps) => {
+    return vertical ? (
+      <div className={classList(`btn-group-vertical`)}>{props.children}</div>
+    ) : (
+      <div className={classList(`btn-group`)}>{props.children}</div>
+    )
   },
 )
 
