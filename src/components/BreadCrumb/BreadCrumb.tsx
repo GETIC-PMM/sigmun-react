@@ -12,7 +12,11 @@ export const InternalBreadCrumbContainer: React.ForwardRefRenderFunction<
       style={
         {
           '--bs-breadcrumb-divider': `${
-            disableDividers ? `''` : `"${divider}"`
+            disableDividers
+              ? `''`
+              : divider.startsWith('url')
+              ? `${divider}`
+              : `"${divider}"`
           }`,
         } as React.CSSProperties
       }
