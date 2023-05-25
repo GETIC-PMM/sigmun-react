@@ -7,6 +7,7 @@ export type ButtonTypes =
   | 'info'
   | 'light'
   | 'dark'
+  | 'link'
 
 export type ButtonProps = {
   btnType?: ButtonTypes

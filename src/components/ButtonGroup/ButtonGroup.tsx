@@ -10,7 +10,7 @@ const ButtonGroup = forwardRef(
     ...props
   }: ButtonGroupProps) => {
     return inputGroup ? (
-      <div className={classList(`input-group`)}>
+      <div {...props} className={classList(`input-group`)}>
         <div className="input-group-prepend">
           <div className="input-group-text" id="btnGroupAddon2">
             {prependText}
@@ -19,9 +19,13 @@ const ButtonGroup = forwardRef(
         {props.children}
       </div>
     ) : vertical ? (
-      <div className={classList(`btn-group-vertical`)}>{props.children}</div>
+      <div {...props} className={classList(`btn-group-vertical`)}>
+        {props.children}
+      </div>
     ) : (
-      <div className={classList(`btn-group`)}>{props.children}</div>
+      <div {...props} className={classList(`btn-group`)}>
+        {props.children}
+      </div>
     )
   },
 )

@@ -13,6 +13,7 @@ const Button = forwardRef(
   }: ButtonProps) => {
     return outlined ? (
       <button
+        {...props}
         className={classList(`btn btn-outline-${btnType}`, {
           'disabled ': disabled,
           'btn-sm': size == 'sm',
@@ -24,6 +25,7 @@ const Button = forwardRef(
       </button>
     ) : (
       <button
+        {...props}
         type="button"
         className={classList(`btn btn-${btnType}`, {
           'disabled ': disabled,

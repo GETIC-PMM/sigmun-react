@@ -9,18 +9,22 @@ const ComponentsJorge = () => {
       <div className="d-flex flex-column gap-4">
         <div>
           <div>Botões</div>
-          <button type="button" className="btn btn-primary position-relative">
+          <Button>
             Notificações
             <Badge badgeFor="button" type="secondary">
               4
             </Badge>
-          </button>
+          </Button>
         </div>
 
         <div>
           <div>Posicionado</div>
           <div className="d-flex gap-5">
-            <button type="button" className="btn btn-primary position-relative">
+            <button
+              onClick={() => console.log('a')}
+              type="button"
+              className="btn btn-primary position-relative"
+            >
               Notificações
               <Badge badgeFor="buttonPositioned" type="danger">
                 99+
@@ -61,10 +65,36 @@ const ComponentsJorge = () => {
 
         <div>
           <div>Detalhe</div>
-          <button type="button" className="btn btn-primary position-relative">
-            Perfil
-            <Badge badgeFor="buttonDetail" type="danger"></Badge>
-          </button>
+          <div className="d-flex gap-4">
+            <button type="button" className="btn btn-primary position-relative">
+              Perfil
+              <Badge badgeFor="buttonDetail" type="danger"></Badge>
+            </button>
+            <button type="button" className="btn btn-primary position-relative">
+              Perfil
+              <Badge
+                badgeFor="buttonDetail"
+                type="danger"
+                bgPosition="bottom-left"
+              ></Badge>
+            </button>
+            <button type="button" className="btn btn-primary position-relative">
+              Perfil
+              <Badge
+                badgeFor="buttonDetail"
+                type="danger"
+                bgPosition="bottom-right"
+              ></Badge>
+            </button>
+            <button type="button" className="btn btn-primary position-relative">
+              Perfil
+              <Badge
+                badgeFor="buttonDetail"
+                type="danger"
+                bgPosition="top-left"
+              ></Badge>
+            </button>
+          </div>
         </div>
 
         <div>
@@ -93,14 +123,12 @@ const ComponentsJorge = () => {
           </a>
         </div>
       </div>
-
       <hr />
-
       <h1>Button</h1>
       <div className="d-flex flex-column gap-2">
         Botão simples
         <div className="d-flex gap-2">
-          <Button>Primary</Button>
+          <Button onClick={() => console.log('a')}>Primary</Button>
           <Button btnType="secondary">Secondary</Button>
           <Button btnType="danger">Danger</Button>
           <Button btnType="dark">Dark</Button>
@@ -108,6 +136,7 @@ const ComponentsJorge = () => {
           <Button btnType="light">Light</Button>
           <Button btnType="success">Success</Button>
           <Button btnType="warning">Warning</Button>
+          <Button btnType="link">Link</Button>
         </div>
         Botão desativado
         <div className="d-flex gap-2">
@@ -133,6 +162,9 @@ const ComponentsJorge = () => {
           <Button disabled btnType="warning">
             Warning
           </Button>
+          <Button disabled btnType="link">
+            Link
+          </Button>
         </div>
         Botão outlined
         <div className="d-flex gap-2">
@@ -157,6 +189,9 @@ const ComponentsJorge = () => {
           </Button>
           <Button outlined btnType="warning">
             Warning
+          </Button>
+          <Button outlined btnType="link">
+            Link
           </Button>
         </div>
         Botão outlined desativado
@@ -185,6 +220,9 @@ const ComponentsJorge = () => {
           <Button disabled outlined btnType="warning">
             Warning
           </Button>
+          <Button disabled outlined btnType="link">
+            Link
+          </Button>
         </div>
         Variações de tamanho
         <div className="d-flex gap-2">
@@ -209,36 +247,87 @@ const ComponentsJorge = () => {
           <Button btnType="primary">3</Button>
         </div>
       </div>
-
       <br />
-
       <hr />
-
       <h1>Button Group</h1>
-      <div className="">
-        <ButtonGroup>
-          <Button>1</Button>
-          <Button>2</Button>
-          <Button>3</Button>
-        </ButtonGroup>
-        <br />
-        <br />
-        <ButtonGroup>
-          <Button outlined>1</Button>
-          <Button outlined>2</Button>
-          <Button outlined disabled>
-            3
-          </Button>
-        </ButtonGroup>
-        <br />
-        <br />
-        <ButtonGroup vertical>
-          <Button btnType="success">1</Button>
-          <Button btnType="success">2</Button>
-          <Button btnType="success">3</Button>
-        </ButtonGroup>
-        <br />
-        <br />
+      <div className="d-flex flex-column gap-2">
+        Formato padrão
+        <div>
+          <ButtonGroup>
+            <Button>Esquerdo</Button>
+            <Button>Meio</Button>
+            <Button>Direito</Button>
+          </ButtonGroup>
+        </div>
+        Formato com selected/active
+        <div>
+          <ButtonGroup>
+            <Button>Esquerdo</Button>
+            <Button active>Meio</Button>
+            <Button>Direito</Button>
+          </ButtonGroup>
+        </div>
+        Formato com disabled
+        <div>
+          <ButtonGroup>
+            <Button>Esquerdo</Button>
+            <Button disabled>Meio</Button>
+            <Button>Direito</Button>
+          </ButtonGroup>
+        </div>
+        Variação com outline
+        <div>
+          <ButtonGroup>
+            <Button outlined>Esquerdo</Button>
+            <Button outlined>Meio</Button>
+            <Button outlined>Direito</Button>
+          </ButtonGroup>
+        </div>
+        Variação vertical
+        <div>
+          <ButtonGroup vertical>
+            <Button>Cima</Button>
+            <Button>Meio</Button>
+            <Button>Baixo</Button>
+          </ButtonGroup>
+        </div>
+        Grupo com radio-button
+        <div>
+          <ButtonGroup>
+            <input
+              type="radio"
+              className="btn-check"
+              name="vbtn-radio"
+              id="vbtn-radio1"
+              autoComplete="off"
+              checked
+            />
+            <label className="btn btn-outline-danger" htmlFor="vbtn-radio1">
+              Radio 1
+            </label>
+            <input
+              type="radio"
+              className="btn-check"
+              name="vbtn-radio"
+              id="vbtn-radio2"
+              autoComplete="off"
+            />
+            <label className="btn btn-outline-danger" htmlFor="vbtn-radio2">
+              Radio 2
+            </label>
+            <input
+              type="radio"
+              className="btn-check"
+              name="vbtn-radio"
+              id="vbtn-radio3"
+              autoComplete="off"
+            />
+            <label className="btn btn-outline-danger" htmlFor="vbtn-radio3">
+              Radio 3
+            </label>
+          </ButtonGroup>
+        </div>
+        Grupo com input
         <div className="col-2">
           <ButtonGroup inputGroup prependText="@">
             <input type="text" className="form-control" />

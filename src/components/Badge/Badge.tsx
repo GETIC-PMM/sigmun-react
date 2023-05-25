@@ -14,6 +14,7 @@ const Badge = forwardRef(
 
     return (
       <span
+        {...props}
         className={classList(` bg-${type}`, {
           'badge position-absolute translate-middle rounded-pill':
             badgeFor == 'buttonPositioned',
@@ -26,7 +27,7 @@ const Badge = forwardRef(
           'top-0 start-0': bgPosition == 'top-left' && canBePositioned,
           'top-0 start-100': bgPosition == 'top-right' && canBePositioned,
           'top-100 start-0': bgPosition == 'bottom-left' && canBePositioned,
-          'top-100 start-10': bgPosition == 'bottom-right' && canBePositioned,
+          'top-100 start-100': bgPosition == 'bottom-right' && canBePositioned,
         })}
       >
         <span
