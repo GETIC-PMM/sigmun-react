@@ -237,6 +237,13 @@ const ComponentsJorge = () => {
           <Button btnType="success">2</Button>
           <Button btnType="success">3</Button>
         </ButtonGroup>
+        <br />
+        <br />
+        <div className="col-2">
+          <ButtonGroup inputGroup prependText="@">
+            <input type="text" className="form-control" />
+          </ButtonGroup>
+        </div>
       </div>
     </div>
   )
