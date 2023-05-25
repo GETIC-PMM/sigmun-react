@@ -8,7 +8,7 @@ import {
 
 // arquivo para testar os componentes sendo desenvolvidos
 function App() {
-  const { AlertContainer, showAlert } = useAlertContainer()
+  const [AlertContainer, showAlert] = useAlertContainer()
   return (
     <div className="p-4">
       <h1>Alert</h1>
@@ -19,15 +19,16 @@ function App() {
         Esse aq nao da
       </Alert>
 
-      <hr />
-
       <AlertContainer />
       <button
-        onClick={() => showAlert('alerta gerado pelo butao', 'primary', 3000)}
+        onClick={() => showAlert('alerta gerado pelo butao', 'danger', 3000)}
       >
         BUTAO AQUI
       </button>
 
+      <hr />
+
+      <h1>Breadcrumb</h1>
       <BreadCrumbContainer>
         <BreadCrumbItem href="#">asdasdas</BreadCrumbItem>
         <BreadCrumbItem isActive href="#">
@@ -51,18 +52,6 @@ function App() {
         <BreadCrumbItem isActive href="#">
           asdasdas
         </BreadCrumbItem>
-      </BreadCrumbContainer>
-
-      <BreadCrumbContainer
-        divider={`url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'
-          width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;)`}
-      >
-        <BreadCrumbItem href="#">asdasdas</BreadCrumbItem>
-        <BreadCrumbItem isActive href="#">
-          asdasdas
-        </BreadCrumbItem>
-        <BreadCrumbItem href="#">asdasdas</BreadCrumbItem>
-        <BreadCrumbItem href="#">asdasdas</BreadCrumbItem>
       </BreadCrumbContainer>
 
       <hr />
