@@ -2,7 +2,7 @@ import { CompoundedComponent } from '../../utils/types'
 import { AlertType } from './types'
 import { forwardRef } from 'react'
 import sigmun from '../../../node_modules/sigmun-hero/dist/js/sigmun'
-const useAlertContainer = () => {
+const useProgrammableAlert = () => {
   const InternalAlertContainer: React.ForwardRefRenderFunction<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
@@ -33,4 +33,4 @@ const useAlertContainer = () => {
   return [AlertContainer, showAlert] as const
 }
 
-export default useAlertContainer
+export default useProgrammableAlert

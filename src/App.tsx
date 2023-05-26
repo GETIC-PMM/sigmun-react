@@ -1,6 +1,6 @@
 import ComponentsJorge from './ComponentsJorge'
 import Alert from './components/Alert/Alert'
-import useAlertContainer from './components/Alert/AlertContainer'
+import useProgrammableAlert from './components/Alert/AlertContainer'
 import {
   BreadCrumbContainer,
   BreadCrumbItem,
@@ -8,7 +8,7 @@ import {
 
 // arquivo para testar os componentes sendo desenvolvidos
 function App() {
-  const [AlertContainer, showAlert] = useAlertContainer()
+  const [AlertContainer, showAlert] = useProgrammableAlert()
   return (
     <div className="p-4">
       <h1>Alert</h1>
