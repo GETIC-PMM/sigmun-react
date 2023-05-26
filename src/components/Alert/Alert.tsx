@@ -2,6 +2,7 @@ import { forwardRef } from 'react'
 import { classList } from '../../utils'
 import { AlertProps } from './types'
 import { CompoundedComponent } from '../../utils/types'
+import 'sigmun-hero/style'
 
 const InternalAlert: React.ForwardRefRenderFunction<
   HTMLDivElement,
