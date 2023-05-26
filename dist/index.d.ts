@@ -52,4 +52,4 @@ type BreadCrumbItemProps = {
 declare const BreadCrumbContainer: CompoundedComponent<BreadCrumbContainerProps>;
 declare const BreadCrumbItem: CompoundedComponent<BreadCrumbItemProps>;
 
-export { Alert, Badge, BreadCrumbContainer, BreadCrumbItem, Button, ButtonGroup, useProgrammableAlert as ProgrammableAlert };
+export { Alert, Badge, BreadCrumbContainer, BreadCrumbItem, Button, ButtonGroup, useProgrammableAlert };
