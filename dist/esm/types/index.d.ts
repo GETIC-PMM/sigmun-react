@@ -1,2 +1,2 @@
-import './styles/sigmun-default.css';
+import 'sigmun-hero/style';
 export * from './components';
