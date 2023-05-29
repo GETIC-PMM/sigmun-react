@@ -26,7 +26,15 @@ const useProgrammableAlert = () => {
     React.HTMLAttributes<HTMLDivElement>
   >
 
-  const showAlert = (message: string, type: AlertType, duration: number) => {
+  const showAlert = ({
+    message,
+    type,
+    duration,
+  }: {
+    message: string
+    type: AlertType
+    duration: number
+  }) => {
     sigmun.functions.showAlert(message, type, '#alert-container', duration)
   }
 
