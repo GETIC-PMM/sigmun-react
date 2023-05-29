@@ -40,4 +40,16 @@ export default [
     external: [/\.css$/],
     plugins: [dts.default()],
   },
+  {
+    input: 'src/styles/sigmun-default.css',
+    output: {
+      file: 'dist/style.css',
+      format: 'es',
+    },
+    plugins: [
+      postcss({
+        modules: true,
+      }),
+    ],
+  },
 ]

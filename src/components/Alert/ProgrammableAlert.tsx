@@ -1,7 +1,7 @@
+import sigmun from 'sigmun-hero'
 import { CompoundedComponent } from '../../utils/types'
 import { AlertType } from './types'
 import { forwardRef } from 'react'
-import sigmun from '../../../node_modules/sigmun-hero/dist/js/sigmun'
 const useProgrammableAlert = () => {
   const InternalAlertContainer: React.ForwardRefRenderFunction<
     HTMLDivElement,

@@ -1,12 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
-  '@rollup/plugin-image':
-    specifier: ^3.0.2
-    version: 3.0.2(rollup@3.23.0)
   sigmun-hero:
     specifier: github:heronildesjr/sigmun-hero
-    version: github.com/heronildesjr/sigmun-hero/eb039fa744d805ac861c4175a1c4b0ba6749b059(@popperjs/core@2.11.7)
+    version: github.com/heronildesjr/sigmun-hero/a8204775cd052d9e302fad82b45555ec1172de5e(@popperjs/core@2.11.7)
 
 devDependencies:
   '@rollup/plugin-commonjs':
@@ -136,20 +133,6 @@ packages:
       rollup: 3.23.0
     dev: true
 
-  /@rollup/plugin-image@3.0.2(rollup@3.23.0):
-    resolution: {integrity: sha512-eGVrD6lummWH5ENo9LWX3JY62uBb9okUNQ2htXkugrG6WjACrMUVhWvss+0wW3fwJWmFYpoEny3yL4spEdh15g==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0||^3.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-    dependencies:
-      '@rollup/pluginutils': 5.0.2(rollup@3.23.0)
-      mini-svg-data-uri: 1.4.4
-      rollup: 3.23.0
-    dev: false
-
   /@rollup/plugin-node-resolve@15.0.2(rollup@3.23.0):
     resolution: {integrity: sha512-Y35fRGUjC3FaurG722uhUuG8YHOJRJQbI6/CkbRkdPotSpDj9NtIN85z1zrcyDcCQIW4qp5mgG72U+gJ0TAFEg==}
     engines: {node: '>=14.0.0'}
@@ -216,6 +199,7 @@ packages:
       estree-walker: 2.0.2
       picomatch: 2.3.1
       rollup: 3.23.0
+    dev: true
 
   /@trysound/sax@0.2.0:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
@@ -224,6 +208,7 @@ packages:
 
   /@types/estree@1.0.1:
     resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
+    dev: true
 
   /@types/node@20.2.4:
     resolution: {integrity: sha512-ni5f8Xlf4PwnT/Z3f0HURc3ZSw8UyrqMqmM3L5ysa7VjHu8c3FOmIo1nKCcLrV/OAmtf3N4kFna/aJqxsfEtnA==}
@@ -553,6 +538,7 @@ packages:
 
   /estree-walker@2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
+    dev: true
 
   /eventemitter3@4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
@@ -567,6 +553,7 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
+    dev: true
     optional: true
 
   /function-bind@1.1.1:
@@ -732,11 +719,6 @@ packages:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
     dev: true
 
-  /mini-svg-data-uri@1.4.4:
-    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
-    hasBin: true
-    dev: false
-
   /minimatch@5.1.6:
     resolution: {integrity: sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==}
     engines: {node: '>=10'}
@@ -802,6 +784,7 @@ packages:
   /picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+    dev: true
 
   /pify@5.0.0:
     resolution: {integrity: sha512-eW/gHNMlxdSP6dmG6uJip6FXN0EQBwm2clYYd8Wul42Cwu/DK8HEftzsapcNdYe2MfLiIwZqsDk2RDEsTE79hA==}
@@ -1288,6 +1271,7 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
 
   /safe-buffer@5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
@@ -1432,9 +1416,9 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  github.com/heronildesjr/sigmun-hero/eb039fa744d805ac861c4175a1c4b0ba6749b059(@popperjs/core@2.11.7):
-    resolution: {tarball: https://codeload.github.com/heronildesjr/sigmun-hero/tar.gz/eb039fa744d805ac861c4175a1c4b0ba6749b059}
-    id: github.com/heronildesjr/sigmun-hero/eb039fa744d805ac861c4175a1c4b0ba6749b059
+  github.com/heronildesjr/sigmun-hero/a8204775cd052d9e302fad82b45555ec1172de5e(@popperjs/core@2.11.7):
+    resolution: {tarball: https://codeload.github.com/heronildesjr/sigmun-hero/tar.gz/a8204775cd052d9e302fad82b45555ec1172de5e}
+    id: github.com/heronildesjr/sigmun-hero/a8204775cd052d9e302fad82b45555ec1172de5e
     name: sigmun-hero
     version: 0.0.1
     dependencies:

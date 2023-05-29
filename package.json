@@ -1,6 +1,6 @@
 {
   "name": "sigmun-react",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs"
@@ -24,7 +24,6 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@rollup/plugin-image": "^3.0.2",
     "sigmun-hero": "github:heronildesjr/sigmun-hero"
   },
   "type": "module",
