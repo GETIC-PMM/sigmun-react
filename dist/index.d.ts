@@ -11,7 +11,11 @@ type CompoundedComponent<T> = React.ForwardRefExoticComponent<T & React.RefAttri
 
 declare const Alert: CompoundedComponent<AlertProps>;
 
-declare const useProgrammableAlert: () => readonly [CompoundedComponent<react.HTMLAttributes<HTMLDivElement>>, (message: string, type: AlertType, duration: number) => void];
+declare const useProgrammableAlert: () => readonly [CompoundedComponent<react.HTMLAttributes<HTMLDivElement>>, ({ message, type, duration, }: {
+    message: string;
+    type: AlertType;
+    duration: number;
+}) => void];
 
 interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
     type?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
