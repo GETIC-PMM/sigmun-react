@@ -11,7 +11,7 @@ export type ButtonTypes =
 
 export type ButtonProps = {
   btnType?: ButtonTypes
-  size?: 'sm' | 'lg'
+  size?: 'sm' | 'lg' | 'md'
   disabled?: boolean
   outlined?: boolean
   active?: boolean

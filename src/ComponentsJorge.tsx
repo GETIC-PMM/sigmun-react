@@ -100,19 +100,11 @@ const ComponentsJorge = () => {
         <div>
           <div>Em linha</div>
           <div className="d-flex gap-1">
-            <Badge badgeFor="text">Cor primária</Badge>
-            <Badge badgeFor="text" type="secondary">
-              Cor secundária
-            </Badge>
-            <Badge badgeFor="text" type="success">
-              Sucesso
-            </Badge>
-            <Badge badgeFor="text" type="warning">
-              Alerta
-            </Badge>
-            <Badge badgeFor="text" type="danger">
-              Erro/Perigo
-            </Badge>
+            <Badge>Cor primária</Badge>
+            <Badge type="secondary">Cor secundária</Badge>
+            <Badge type="success">Sucesso</Badge>
+            <Badge type="warning">Alerta</Badge>
+            <Badge type="danger">Erro/Perigo</Badge>
           </div>
         </div>
         <div>
@@ -334,6 +326,13 @@ const ComponentsJorge = () => {
           </ButtonGroup>
         </div>
       </div>
+
+      <br />
+
+      <Button>
+        Adicionar
+        <i className="bi bi-plus p-1 ms-2" />
+      </Button>
     </div>
   )
 }

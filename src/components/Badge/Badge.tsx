@@ -7,7 +7,7 @@ const InternalBadge: React.ForwardRefRenderFunction<
   HTMLSpanElement,
   BadgeProps
 > = (
-  { type = 'primary', badgeFor, bgPosition = 'top-right', ...props },
+  { type = 'primary', badgeFor = 'text', bgPosition = 'top-right', ...props },
   ref,
 ) => {
   const canBePositioned =
@@ -22,7 +22,7 @@ const InternalBadge: React.ForwardRefRenderFunction<
           badgeFor == 'buttonPositioned',
         'badge position-absolute translate-middle border border-light rounded-circle p-2':
           badgeFor == 'buttonDetail',
-        'position-absolute bottom-0 start-75 translate-middle p-1 border border-light rounded-circle':
+        'position-absolute start-75 translate-middle p-1 border border-light rounded-circle':
           badgeFor == 'icon',
         'mx-1': badgeFor == 'button',
         'badge ': badgeFor == 'button' || badgeFor == 'text',
