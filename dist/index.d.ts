@@ -44,6 +44,29 @@ type ButtonGroupProps = {
 
 declare const ButtonGroup: CompoundedComponent<ButtonGroupProps>;
 
+type DropdownDividerProps = React.HTMLAttributes<HTMLHRElement>;
+
+declare const Dropdown: {
+    Menu: react.ForwardRefExoticComponent<{
+        variant?: "top" | "right" | "bottom" | "left" | undefined;
+        action: react.ReactNode;
+        button?: react.ReactNode;
+    } & react.HTMLAttributes<HTMLDivElement> & react.RefAttributes<HTMLDivElement>>;
+    Item: react.ForwardRefExoticComponent<{
+        href: string;
+    } & react.HTMLAttributes<HTMLLIElement> & react.RefAttributes<HTMLLIElement>>;
+    Divider: react.ForwardRefExoticComponent<DropdownDividerProps & react.RefAttributes<HTMLHRElement>>;
+    Action: react.ForwardRefExoticComponent<{
+        split?: boolean | undefined;
+    } & {
+        btnType?: ButtonTypes | undefined;
+        size?: "sm" | "lg" | "md" | undefined;
+        disabled?: boolean | undefined;
+        outlined?: boolean | undefined;
+        active?: boolean | undefined;
+    } & react.ButtonHTMLAttributes<HTMLButtonElement> & react.RefAttributes<HTMLButtonElement>>;
+};
+
 type BreadCrumbContainerProps = {
     divider?: string;
     disableDividers?: boolean;
@@ -56,4 +79,4 @@ type BreadCrumbItemProps = {
 declare const BreadCrumbContainer: CompoundedComponent<BreadCrumbContainerProps>;
 declare const BreadCrumbItem: CompoundedComponent<BreadCrumbItemProps>;
 
-export { Alert, Badge, BreadCrumbContainer, BreadCrumbItem, Button, ButtonGroup, useProgrammableAlert };
+export { Alert, Badge, BreadCrumbContainer, BreadCrumbItem, Button, ButtonGroup, Dropdown, useProgrammableAlert };
