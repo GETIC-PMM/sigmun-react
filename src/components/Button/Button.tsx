@@ -13,6 +13,7 @@ const InternalButton: React.ForwardRefRenderFunction<
     outlined = false,
     active = false,
     size,
+    className,
     ...props
   },
   ref,
@@ -21,7 +22,7 @@ const InternalButton: React.ForwardRefRenderFunction<
     <button
       ref={ref}
       {...props}
-      className={classList(`btn btn-outline-${btnType}`, {
+      className={classList(`btn btn-outline-${btnType} ${className}`, {
         'disabled ': disabled,
         'btn-sm': size == 'sm',
         'btn-lg': size == 'lg',
@@ -34,7 +35,7 @@ const InternalButton: React.ForwardRefRenderFunction<
     <button
       {...props}
       type="button"
-      className={classList(`btn btn-${btnType}`, {
+      className={classList(`btn btn-${btnType} ${className}`, {
         'disabled ': disabled,
         'btn-sm': size == 'sm',
         'btn-lg': size == 'lg',

@@ -28,7 +28,7 @@ declare const Badge: CompoundedComponent<BadgeProps>;
 type ButtonTypes = 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark' | 'link';
 type ButtonProps = {
     btnType?: ButtonTypes;
-    size?: 'sm' | 'lg';
+    size?: 'sm' | 'lg' | 'md';
     disabled?: boolean;
     outlined?: boolean;
     active?: boolean;
