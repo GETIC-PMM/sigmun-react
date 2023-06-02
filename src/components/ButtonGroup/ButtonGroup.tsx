@@ -6,9 +6,12 @@ import { CompoundedComponent } from '../../utils/types'
 const InternalButtonGroup: React.ForwardRefRenderFunction<
   HTMLDivElement,
   ButtonGroupProps
-> = ({ vertical = false, inputGroup = false, prependText, ...props }, ref) => {
+> = (
+  { vertical = false, inputGroup = false, prependText, className, ...props },
+  ref,
+) => {
   return inputGroup ? (
-    <div ref={ref} {...props} className={classList(`input-group`)}>
+    <div ref={ref} {...props} className={classList(`input-group ${className}`)}>
       <div className="input-group-prepend">
         <div className="input-group-text" id="btnGroupAddon2">
           {prependText}
@@ -17,11 +20,11 @@ const InternalButtonGroup: React.ForwardRefRenderFunction<
       {props.children}
     </div>
   ) : vertical ? (
-    <div {...props} className={classList(`btn-group-vertical`)}>
+    <div {...props} className={classList(`btn-group-vertical ${className}`)}>
       {props.children}
     </div>
   ) : (
-    <div {...props} className={classList(`btn-group`)}>
+    <div {...props} className={classList(`btn-group ${className}`)}>
       {props.children}
     </div>
   )
