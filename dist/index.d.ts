@@ -1,5 +1,6 @@
 /// <reference types="react" />
 import * as react from 'react';
+import { HTMLAttributes, HTMLAttributeAnchorTarget } from 'react';
 
 type AlertType = 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
 type AlertProps = {
@@ -67,6 +68,22 @@ declare const Dropdown: {
     } & react.ButtonHTMLAttributes<HTMLButtonElement> & react.RefAttributes<HTMLButtonElement>>;
 };
 
+type ListGroupProps = HTMLAttributes<HTMLUListElement>;
+type ListGroupItemProps = {
+    active?: boolean;
+    variant?: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
+} & HTMLAttributes<HTMLLIElement>;
+type ListGroupItemActionProps = Pick<ListGroupItemProps, "active" | "variant"> & HTMLAttributes<HTMLAnchorElement> & {
+    href: string;
+    target?: HTMLAttributeAnchorTarget;
+};
+
+declare const ListGroup: {
+    Container: CompoundedComponent<ListGroupProps>;
+    Action: CompoundedComponent<ListGroupItemActionProps>;
+    Item: CompoundedComponent<ListGroupItemProps>;
+};
+
 type BreadCrumbContainerProps = {
     divider?: string;
     disableDividers?: boolean;
@@ -79,4 +96,4 @@ type BreadCrumbItemProps = {
 declare const BreadCrumbContainer: CompoundedComponent<BreadCrumbContainerProps>;
 declare const BreadCrumbItem: CompoundedComponent<BreadCrumbItemProps>;
 
-export { Alert, Badge, BreadCrumbContainer, BreadCrumbItem, Button, ButtonGroup, Dropdown, useProgrammableAlert };
+export { Alert, Badge, BreadCrumbContainer, BreadCrumbItem, Button, ButtonGroup, Dropdown, ListGroup, useProgrammableAlert };
