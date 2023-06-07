@@ -1,1 +1,1 @@
-export { BreadCrumbContainer, BreadCrumbItem } from './BreadCrumb'
+export { default } from './BreadCrumb'

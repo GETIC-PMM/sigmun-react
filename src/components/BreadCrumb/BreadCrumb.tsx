@@ -45,11 +45,16 @@ const InternalBreadCrumbItem: React.ForwardRefRenderFunction<
   )
 }
 
-export const BreadCrumbContainer = forwardRef<
-  HTMLElement,
-  BreadCrumbContainerProps
->(InternalBreadCrumbContainer) as CompoundedComponent<BreadCrumbContainerProps>
+const BreadCrumbContainer = forwardRef<HTMLElement, BreadCrumbContainerProps>(
+  InternalBreadCrumbContainer,
+) as CompoundedComponent<BreadCrumbContainerProps>
 
-export const BreadCrumbItem = forwardRef<HTMLLIElement, BreadCrumbItemProps>(
+const BreadCrumbItem = forwardRef<HTMLLIElement, BreadCrumbItemProps>(
   InternalBreadCrumbItem,
 ) as CompoundedComponent<BreadCrumbItemProps>
+
+const BreadCrumb = Object.assign(BreadCrumbContainer, {
+  Item: BreadCrumbItem,
+})
+
+export default BreadCrumb
