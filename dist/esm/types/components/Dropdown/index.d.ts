@@ -1,10 +1,9 @@
 /// <reference types="react" />
-declare const Dropdown: {
-    Menu: import("react").ForwardRefExoticComponent<{
-        variant?: "top" | "right" | "bottom" | "left" | undefined;
-        action: import("react").ReactNode;
-        button?: import("react").ReactNode;
-    } & import("react").HTMLAttributes<HTMLDivElement> & import("react").RefAttributes<HTMLDivElement>>;
+declare const Dropdown: import("react").ForwardRefExoticComponent<{
+    variant?: "top" | "right" | "bottom" | "left" | undefined;
+    action: import("react").ReactNode;
+    button?: import("react").ReactNode;
+} & import("react").HTMLAttributes<HTMLDivElement> & import("react").RefAttributes<HTMLDivElement>> & {
     Item: import("react").ForwardRefExoticComponent<{
         href: string;
     } & import("react").HTMLAttributes<HTMLLIElement> & import("react").RefAttributes<HTMLLIElement>>;

@@ -1,5 +1,5 @@
-import React from "react";
-import { DropdownItemProps } from "./types";
+import React from 'react'
+import { DropdownItemProps } from './types'
 
 const InternalDropdownItem: React.ForwardRefRenderFunction<
   HTMLLIElement,
@@ -11,9 +11,9 @@ const InternalDropdownItem: React.ForwardRefRenderFunction<
         {children}
       </a>
     </li>
-  );
-};
+  )
+}
 
-const Item = React.forwardRef(InternalDropdownItem);
+const Item = React.forwardRef(InternalDropdownItem)
 
-export default Item;
+export default Item

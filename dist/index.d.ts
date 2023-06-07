@@ -47,12 +47,11 @@ declare const ButtonGroup: CompoundedComponent<ButtonGroupProps>;
 
 type DropdownDividerProps = React.HTMLAttributes<HTMLHRElement>;
 
-declare const Dropdown: {
-    Menu: react.ForwardRefExoticComponent<{
-        variant?: "top" | "right" | "bottom" | "left" | undefined;
-        action: react.ReactNode;
-        button?: react.ReactNode;
-    } & react.HTMLAttributes<HTMLDivElement> & react.RefAttributes<HTMLDivElement>>;
+declare const Dropdown: react.ForwardRefExoticComponent<{
+    variant?: "top" | "right" | "bottom" | "left" | undefined;
+    action: react.ReactNode;
+    button?: react.ReactNode;
+} & react.HTMLAttributes<HTMLDivElement> & react.RefAttributes<HTMLDivElement>> & {
     Item: react.ForwardRefExoticComponent<{
         href: string;
     } & react.HTMLAttributes<HTMLLIElement> & react.RefAttributes<HTMLLIElement>>;

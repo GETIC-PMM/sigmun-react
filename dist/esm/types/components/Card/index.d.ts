@@ -1,5 +1,4 @@
-declare const Card: {
-    Container: import("../../utils/types").CompoundedComponent<import("./types").CardContainerProps>;
+declare const Card: import("../../utils/types").CompoundedComponent<import("./types").CardContainerProps> & {
     Body: import("../../utils/types").CompoundedComponent<import("./types").CardProps>;
     Footer: import("../../utils/types").CompoundedComponent<import("./types").CardProps>;
     Header: import("../../utils/types").CompoundedComponent<import("./types").CardProps>;

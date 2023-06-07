@@ -6,14 +6,13 @@ import Img from './Img'
 import Header from './Header'
 import Text from './Text'
 
-const Card = {
-  Container,
+const Card = Object.assign(Container, {
   Body,
   Footer,
   Header,
   Img,
   Text,
   Title,
-}
+})
 
 export default Card
