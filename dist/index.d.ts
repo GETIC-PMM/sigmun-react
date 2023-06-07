@@ -96,4 +96,21 @@ declare const BreadCrumb: CompoundedComponent<BreadCrumbContainerProps> & {
     Item: CompoundedComponent<BreadCrumbItemProps>;
 };
 
-export { Alert, Badge, BreadCrumb, Button, ButtonGroup, Dropdown, ListGroup, useProgrammableAlert };
+type CardContainerProps = {
+    variant?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
+} & React.HTMLAttributes<HTMLDivElement>;
+type CardProps = Omit<CardContainerProps, 'variant'>;
+type CardImgProps = {
+    position: 'top' | 'bottom' | 'fluid';
+} & React.ImgHTMLAttributes<HTMLImageElement>;
+
+declare const Card: CompoundedComponent<CardContainerProps> & {
+    Body: CompoundedComponent<CardProps>;
+    Footer: CompoundedComponent<CardProps>;
+    Header: CompoundedComponent<CardProps>;
+    Img: CompoundedComponent<CardImgProps>;
+    Text: CompoundedComponent<CardProps>;
+    Title: CompoundedComponent<CardProps>;
+};
+
+export { Alert, Badge, BreadCrumb, Button, ButtonGroup, Card, Dropdown, ListGroup, useProgrammableAlert };
