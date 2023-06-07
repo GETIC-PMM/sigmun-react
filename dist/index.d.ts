@@ -92,7 +92,8 @@ type BreadCrumbItemProps = {
     href: string;
 } & React.HTMLAttributes<HTMLLIElement>;
 
-declare const BreadCrumbContainer: CompoundedComponent<BreadCrumbContainerProps>;
-declare const BreadCrumbItem: CompoundedComponent<BreadCrumbItemProps>;
+declare const BreadCrumb: CompoundedComponent<BreadCrumbContainerProps> & {
+    Item: CompoundedComponent<BreadCrumbItemProps>;
+};
 
-export { Alert, Badge, BreadCrumbContainer, BreadCrumbItem, Button, ButtonGroup, Dropdown, ListGroup, useProgrammableAlert };
+export { Alert, Badge, BreadCrumb, Button, ButtonGroup, Dropdown, ListGroup, useProgrammableAlert };
