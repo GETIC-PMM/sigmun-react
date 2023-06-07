@@ -1,6 +1,6 @@
 {
   "name": "sigmun-react",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs"
@@ -24,6 +24,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.1",
     "sigmun-hero": "github:heronildesjr/sigmun-hero"
   },
   "type": "module",
