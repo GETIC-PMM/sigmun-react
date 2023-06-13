@@ -77,8 +77,7 @@ type ListGroupItemActionProps = Pick<ListGroupItemProps, "active" | "variant"> &
     target?: HTMLAttributeAnchorTarget;
 };
 
-declare const ListGroup: {
-    Container: CompoundedComponent<ListGroupProps>;
+declare const ListGroup: CompoundedComponent<ListGroupProps> & {
     Action: CompoundedComponent<ListGroupItemActionProps>;
     Item: CompoundedComponent<ListGroupItemProps>;
 };
