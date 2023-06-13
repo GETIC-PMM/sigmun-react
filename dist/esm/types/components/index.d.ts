@@ -6,3 +6,5 @@ export { default as Dropdown } from './Dropdown';
 export { default as ListGroup } from './ListGroup';
 export { default as BreadCrumb } from './BreadCrumb';
 export { default as Card } from './Card';
+export { default as Modal } from './Modal';
+export { default as Nav } from './Nav';

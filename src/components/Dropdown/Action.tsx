@@ -1,7 +1,7 @@
 import React from 'react'
 import { DropdownActionProps } from './types'
 import { classList } from '../../utils'
-import { Button } from '..'
+import Button from '../Button'
 
 const InternalDropdownAction: React.ForwardRefRenderFunction<
   HTMLButtonElement,

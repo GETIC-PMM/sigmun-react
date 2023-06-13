@@ -20,7 +20,8 @@
 
     "declaration": true,
     "declarationDir": "types",
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "noEmit": false
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

@@ -112,4 +112,26 @@ declare const Card: CompoundedComponent<CardContainerProps> & {
     Title: CompoundedComponent<CardProps>;
 };
 
-export { Alert, Badge, BreadCrumb, Button, ButtonGroup, Card, Dropdown, ListGroup, useProgrammableAlert };
+type ModalProps = React.HTMLAttributes<HTMLDivElement>;
+
+declare const Modal: CompoundedComponent<ModalProps> & {
+    Header: CompoundedComponent<ModalProps>;
+    Body: CompoundedComponent<ModalProps>;
+    Footer: CompoundedComponent<ModalProps>;
+    Title: CompoundedComponent<ModalProps>;
+};
+
+type NavProps = {
+    variant?: 'tabs' | 'pills' | 'vertical';
+} & React.HTMLAttributes<HTMLUListElement>;
+type NavItemProps = {
+    active?: boolean;
+    disabled?: boolean;
+    href: string;
+} & React.HTMLAttributes<HTMLLIElement>;
+
+declare const Nav: CompoundedComponent<NavProps> & {
+    Item: CompoundedComponent<NavItemProps>;
+};
+
+export { Alert, Badge, BreadCrumb, Button, ButtonGroup, Card, Dropdown, ListGroup, Modal, Nav, useProgrammableAlert };

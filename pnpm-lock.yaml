@@ -10,7 +10,7 @@ dependencies:
     version: 2.2.1
   sigmun-hero:
     specifier: github:heronildesjr/sigmun-hero
-    version: github.com/heronildesjr/sigmun-hero/7bbbf268fc0e7e148052dc214cd422b651847ff1(@popperjs/core@2.11.7)
+    version: github.com/heronildesjr/sigmun-hero/14e460036e9af63d8f6eaa3b6da9121b530ffaf8(@popperjs/core@2.11.7)
 
 devDependencies:
   '@rollup/plugin-commonjs':
@@ -1434,9 +1434,9 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  github.com/heronildesjr/sigmun-hero/7bbbf268fc0e7e148052dc214cd422b651847ff1(@popperjs/core@2.11.7):
-    resolution: {tarball: https://codeload.github.com/heronildesjr/sigmun-hero/tar.gz/7bbbf268fc0e7e148052dc214cd422b651847ff1}
-    id: github.com/heronildesjr/sigmun-hero/7bbbf268fc0e7e148052dc214cd422b651847ff1
+  github.com/heronildesjr/sigmun-hero/14e460036e9af63d8f6eaa3b6da9121b530ffaf8(@popperjs/core@2.11.7):
+    resolution: {tarball: https://codeload.github.com/heronildesjr/sigmun-hero/tar.gz/14e460036e9af63d8f6eaa3b6da9121b530ffaf8}
+    id: github.com/heronildesjr/sigmun-hero/14e460036e9af63d8f6eaa3b6da9121b530ffaf8
     name: sigmun-hero
     version: 0.0.1
     dependencies:
