@@ -13,7 +13,7 @@ const InternalButton: React.ForwardRefRenderFunction<
     outlined = false,
     active = false,
     size,
-    className,
+    className = '',
     ...props
   },
   ref,

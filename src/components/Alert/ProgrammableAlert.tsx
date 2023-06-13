@@ -6,7 +6,7 @@ const useProgrammableAlert = () => {
   const InternalAlertContainer: React.ForwardRefRenderFunction<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
-  > = ({ className, children, ...props }, ref) => {
+  > = ({ className = '', children, ...props }, ref) => {
     return (
       <div
         ref={ref}

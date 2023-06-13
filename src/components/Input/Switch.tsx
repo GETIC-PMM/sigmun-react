@@ -6,7 +6,7 @@ import { CompoundedComponent } from '../../utils/types'
 const InternalSwitch: React.ForwardRefRenderFunction<
   HTMLInputElement,
   RestInputProps
-> = ({ className, label, ...props }, ref) => {
+> = ({ className = '', label, ...props }, ref) => {
   const id = createId()
   return (
     <div className={`form-check form-switch ${className ?? ''}`}>

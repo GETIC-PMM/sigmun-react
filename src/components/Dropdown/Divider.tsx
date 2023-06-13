@@ -4,7 +4,7 @@ import type { DropdownDividerProps } from './types'
 const InternalDropdownDivider: React.ForwardRefRenderFunction<
   HTMLHRElement,
   DropdownDividerProps
-> = ({ className, ...props }, ref) => {
+> = ({ className = '', ...props }, ref) => {
   return <hr ref={ref} className={`dropdown-divider ${className}`} {...props} />
 }
 

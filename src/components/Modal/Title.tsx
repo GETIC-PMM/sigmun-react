@@ -5,7 +5,7 @@ import { CompoundedComponent } from '../../utils/types'
 const InternalTitle: React.ForwardRefRenderFunction<
   HTMLDivElement,
   ModalProps
-> = ({ className, ...props }, ref) => {
+> = ({ className = '', ...props }, ref) => {
   return <h1 ref={ref} className={`modal-title ${className}`} {...props} />
 }
 

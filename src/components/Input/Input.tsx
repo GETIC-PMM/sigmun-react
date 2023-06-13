@@ -6,7 +6,7 @@ import { CompoundedComponent } from '../../utils/types'
 const InternalInput: React.ForwardRefRenderFunction<
   HTMLInputElement,
   InputProps
-> = ({ className, error = false, disabled = false, ...props }, ref) => {
+> = ({ className = '', error = false, disabled = false, ...props }, ref) => {
   return (
     <input
       className={classList(`form-control ${className ?? ''}`, {

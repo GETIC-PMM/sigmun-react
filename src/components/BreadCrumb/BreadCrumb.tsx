@@ -31,7 +31,7 @@ export const InternalBreadCrumbContainer: React.ForwardRefRenderFunction<
 const InternalBreadCrumbItem: React.ForwardRefRenderFunction<
   HTMLLIElement,
   BreadCrumbItemProps
-> = ({ isActive = false, href, children, className, ...props }, ref) => {
+> = ({ isActive = false, href, children, className = '', ...props }, ref) => {
   return (
     <li
       ref={ref}

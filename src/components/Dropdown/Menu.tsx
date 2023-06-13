@@ -7,7 +7,7 @@ const InternalDropdownMenu: React.ForwardRefRenderFunction<
   HTMLDivElement,
   DropdownMenuProps
 > = (
-  { variant: position, children, className, action, button, ...props },
+  { variant: position, children, className = '', action, button, ...props },
   ref,
 ) => {
   return (

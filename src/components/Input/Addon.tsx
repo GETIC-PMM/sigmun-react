@@ -5,7 +5,7 @@ import { CompoundedComponent } from '../../utils/types'
 const InternalAddon: React.ForwardRefRenderFunction<
   HTMLSpanElement,
   AddonProps
-> = ({ className, ...props }, ref) => {
+> = ({ className = '', ...props }, ref) => {
   return (
     <span
       className={`input-group-text ${className ?? ''}`}

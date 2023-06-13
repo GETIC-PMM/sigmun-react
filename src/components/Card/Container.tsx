@@ -6,7 +6,7 @@ import { CompoundedComponent } from '../../utils/types'
 const InternalCard: React.ForwardRefRenderFunction<
   HTMLDivElement,
   CardContainerProps
-> = ({ className, variant, ...props }, ref) => {
+> = ({ className = '', variant, ...props }, ref) => {
   return (
     <div
       ref={ref}

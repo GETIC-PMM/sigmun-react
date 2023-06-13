@@ -6,7 +6,7 @@ export type CarouselProps = React.HTMLAttributes<HTMLDivElement>
 const InternalCarousel: React.ForwardRefRenderFunction<
   HTMLDivElement,
   CarouselProps
-> = ({ className, ...props }, ref) => {
+> = ({ className = '', ...props }, ref) => {
   return (
     <div
       ref={ref}

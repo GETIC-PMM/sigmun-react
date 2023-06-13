@@ -6,12 +6,12 @@ import { CompoundedComponent } from '../../utils/types'
 const InternalItem: React.ForwardRefRenderFunction<
   HTMLLIElement,
   ListGroupItemProps
-> = ({ className, active = false, variant, ...props }, ref) => {
+> = ({ className = '', active = false, variant, ...props }, ref) => {
   return (
     <li
       ref={ref}
       className={classList(`list-group-item ${className}`, {
-        "active": active,
+        active: active,
         [`list-group-item-${variant}`]: !!variant,
       })}
       {...props}

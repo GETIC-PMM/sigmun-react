@@ -5,7 +5,7 @@ import { CompoundedComponent } from '../../utils/types'
 const InternalContainer: React.ForwardRefRenderFunction<
   HTMLUListElement,
   ListGroupProps
-> = ({ className, ...props }, ref) => {
+> = ({ className = '', ...props }, ref) => {
   return <ul ref={ref} className={`list-group ${className}`} {...props} />
 }
 

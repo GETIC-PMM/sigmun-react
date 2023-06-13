@@ -5,7 +5,7 @@ import { CompoundedComponent } from '../../utils/types'
 const InternalLabel: React.ForwardRefRenderFunction<
   HTMLLabelElement,
   LabelProps
-> = ({ className, ...props }, ref) => {
+> = ({ className = '', ...props }, ref) => {
   return (
     <label className={`form-label ${className ?? ''}`} ref={ref} {...props} />
   )

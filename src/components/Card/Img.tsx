@@ -6,7 +6,7 @@ import { CompoundedComponent } from '../../utils/types'
 const InternalCardImg: React.ForwardRefRenderFunction<
   HTMLImageElement,
   CardImgProps
-> = ({ className, position = 'top', ...props }, ref) => {
+> = ({ className = '', position = 'top', ...props }, ref) => {
   return (
     <img
       ref={ref}

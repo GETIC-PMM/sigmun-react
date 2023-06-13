@@ -5,7 +5,7 @@ import { CompoundedComponent } from '../../utils/types'
 const InternalContainer: React.ForwardRefRenderFunction<
   HTMLDivElement,
   ModalProps
-> = ({ className, children, ...props }, ref) => {
+> = ({ className = '', children, ...props }, ref) => {
   return (
     <div ref={ref} className={`modal fade ${className}`} {...props}>
       <div className="modal-dialog modal-dialog-centered">

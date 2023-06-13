@@ -5,7 +5,7 @@ import { CompoundedComponent } from '../../utils/types'
 const InternalInputGroup: React.ForwardRefRenderFunction<
   HTMLDivElement,
   InputGroupProps
-> = ({ className, ...props }, ref) => {
+> = ({ className = '', ...props }, ref) => {
   return (
     <div className={`input-group ${className ?? ''}}`} ref={ref} {...props} />
   )

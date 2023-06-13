@@ -5,7 +5,7 @@ import { CompoundedComponent } from '../../utils/types'
 const InternalFooter: React.ForwardRefRenderFunction<
   HTMLDivElement,
   ModalProps
-> = ({ className, ...props }, ref) => {
+> = ({ className = '', ...props }, ref) => {
   return <div ref={ref} className={`modal-footer ${className}`} {...props} />
 }
 

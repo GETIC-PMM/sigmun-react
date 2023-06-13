@@ -7,7 +7,13 @@ const InternalButtonGroup: React.ForwardRefRenderFunction<
   HTMLDivElement,
   ButtonGroupProps
 > = (
-  { vertical = false, inputGroup = false, prependText, className, ...props },
+  {
+    vertical = false,
+    inputGroup = false,
+    prependText,
+    className = '',
+    ...props
+  },
   ref,
 ) => {
   return inputGroup ? (

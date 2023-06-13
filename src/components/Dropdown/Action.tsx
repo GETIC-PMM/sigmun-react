@@ -1,15 +1,18 @@
 import React from 'react'
 import { DropdownActionProps } from './types'
-import Button from '../Button'
+import { classList } from '../../utils'
+import { Button } from '..'
 
 const InternalDropdownAction: React.ForwardRefRenderFunction<
   HTMLButtonElement,
   DropdownActionProps
-> = ({ className, split = false, ...props }, ref) => {
+> = ({ className = '', split = false, ...props }, ref) => {
   return (
     <Button
       ref={ref}
-      className="dropdown-toggle"
+      className={classList(`dropdown-toggle ${className}`, {
+        'dropdown-toggle-split': split,
+      })}
       data-bs-toggle="dropdown"
       aria-expanded="false"
       {...props}
