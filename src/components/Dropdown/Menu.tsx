@@ -6,9 +6,13 @@ import ButtonGroup from '../ButtonGroup'
 const InternalDropdownMenu: React.ForwardRefRenderFunction<
   HTMLDivElement,
   DropdownMenuProps
-> = ({ variant: position, children, className, action, button, ...props }) => {
+> = (
+  { variant: position, children, className, action, button, ...props },
+  ref,
+) => {
   return (
     <ButtonGroup
+      ref={ref}
       className={classList(`${className}`, {
         dropup: position === 'top',
         dropstart: position === 'left',
