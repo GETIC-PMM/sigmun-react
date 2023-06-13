@@ -8,3 +8,4 @@ export { default as BreadCrumb } from './BreadCrumb';
 export { default as Card } from './Card';
 export { default as Modal } from './Modal';
 export { default as Nav } from './Nav';
+export { default as Navbar } from './Navbar';

@@ -134,4 +134,24 @@ declare const Nav: CompoundedComponent<NavProps> & {
     Item: CompoundedComponent<NavItemProps>;
 };
 
-export { Alert, Badge, BreadCrumb, Button, ButtonGroup, Card, Dropdown, ListGroup, Modal, Nav, useProgrammableAlert };
+type NavbarProps = {
+    variant?: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
+    brandHref?: string;
+    brand?: React.ReactNode;
+} & React.HTMLAttributes<HTMLDivElement>;
+type NavbarItemProps = {
+    active?: boolean;
+    disabled?: boolean;
+    href: string;
+} & React.HTMLAttributes<HTMLLIElement>;
+type NavbarDropdownProps = {
+    title: React.ReactNode;
+    href: string;
+} & React.HTMLAttributes<HTMLLIElement>;
+
+declare const Navbar: CompoundedComponent<NavbarProps> & {
+    Item: CompoundedComponent<NavbarItemProps>;
+    Dropdown: CompoundedComponent<NavbarDropdownProps>;
+};
+
+export { Alert, Badge, BreadCrumb, Button, ButtonGroup, Card, Dropdown, ListGroup, Modal, Nav, Navbar, useProgrammableAlert };
