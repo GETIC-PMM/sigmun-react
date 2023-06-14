@@ -154,4 +154,15 @@ declare const Navbar: CompoundedComponent<NavbarProps> & {
     Dropdown: CompoundedComponent<NavbarDropdownProps>;
 };
 
-export { Alert, Badge, BreadCrumb, Button, ButtonGroup, Card, Dropdown, ListGroup, Modal, Nav, Navbar, useProgrammableAlert };
+type OffcanvasProps = React.HTMLAttributes<HTMLDivElement>;
+type OffcanvasContainerProps = {
+    placement?: 'start' | 'top';
+} & OffcanvasProps;
+
+declare const Offcanvas: CompoundedComponent<OffcanvasContainerProps> & {
+    Header: CompoundedComponent<OffcanvasProps>;
+    Body: CompoundedComponent<OffcanvasProps>;
+    Title: CompoundedComponent<OffcanvasProps>;
+};
+
+export { Alert, Badge, BreadCrumb, Button, ButtonGroup, Card, Dropdown, ListGroup, Modal, Nav, Navbar, Offcanvas, useProgrammableAlert };
