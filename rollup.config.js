@@ -33,6 +33,10 @@ export default [
       postcss(),
       terser(),
     ],
+
+    context: 'window',
+
+    moduleContext: 'window',
   },
   {
     input: 'dist/esm/types/index.d.ts',
