@@ -3,14 +3,14 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Popover from 'react-bootstrap/Popover'
 import { PopoverProps } from './types'
 
-const MyPopover: React.ForwardRefRenderFunction<HTMLElement, PopoverProps> = ({
+const MyPopover = ({
   placement,
   title,
   children,
   buttonTitle,
   buttonVariant = 'primary',
   ...props
-}) => {
+}: PopoverProps) => {
   return (
     <OverlayTrigger
       trigger="click"

@@ -1,13 +1,13 @@
 import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { TooltipProps } from './types'
 
-const MyTooltip: React.ForwardRefRenderFunction<HTMLElement, TooltipProps> = ({
+const MyTooltip = ({
   placement,
   children,
   buttonTitle,
   buttonVariant = 'primary',
   ...props
-}) => {
+}: TooltipProps) => {
   return (
     <OverlayTrigger
       placement={placement}

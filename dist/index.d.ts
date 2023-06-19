@@ -1,6 +1,7 @@
 /// <reference types="react" />
 import * as react from 'react';
 import { HTMLAttributes, HTMLAttributeAnchorTarget } from 'react';
+import * as react_jsx_runtime from 'react/jsx-runtime';
 import { OverlayTriggerProps } from 'react-bootstrap';
 
 type AlertType = 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
@@ -173,7 +174,7 @@ type TooltipProps = {
     buttonVariant?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
 } & Omit<OverlayTriggerProps, 'children' | 'overlay'>;
 
-declare const MyTooltip: React.ForwardRefRenderFunction<HTMLElement, TooltipProps>;
+declare const MyTooltip: ({ placement, children, buttonTitle, buttonVariant, ...props }: TooltipProps) => react_jsx_runtime.JSX.Element;
 
 declare const useToast: () => readonly [CompoundedComponent<react.HTMLAttributes<HTMLDivElement>> & {
     Header: CompoundedComponent<react.HTMLAttributes<HTMLDivElement>>;
@@ -188,6 +189,6 @@ type PopoverProps = {
     buttonVariant?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
 } & Omit<OverlayTriggerProps, 'trigger' | 'placement' | 'children' | 'overlay'>;
 
-declare const MyPopover: React.ForwardRefRenderFunction<HTMLElement, PopoverProps>;
+declare const MyPopover: ({ placement, title, children, buttonTitle, buttonVariant, ...props }: PopoverProps) => react_jsx_runtime.JSX.Element;
 
 export { Alert, Badge, BreadCrumb, Button, ButtonGroup, Card, Dropdown, ListGroup, Modal, Nav, Navbar, Offcanvas, MyPopover as Popover, MyTooltip as Tooltip, useProgrammableAlert, useToast };

@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { PopoverProps } from './types';
-declare const MyPopover: React.ForwardRefRenderFunction<HTMLElement, PopoverProps>;
+declare const MyPopover: ({ placement, title, children, buttonTitle, buttonVariant, ...props }: PopoverProps) => import("react/jsx-runtime").JSX.Element;
 export default MyPopover;
