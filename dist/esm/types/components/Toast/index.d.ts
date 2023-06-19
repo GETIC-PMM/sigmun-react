@@ -1,1 +1,2 @@
-export { default as useToast } from "./Toast";
+import useToast from './Toast';
+export default useToast;

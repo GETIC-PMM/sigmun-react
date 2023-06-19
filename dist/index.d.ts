@@ -1,6 +1,7 @@
 /// <reference types="react" />
 import * as react from 'react';
 import { HTMLAttributes, HTMLAttributeAnchorTarget } from 'react';
+import { OverlayTriggerProps } from 'react-bootstrap';
 
 type AlertType = 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
 type AlertProps = {
@@ -165,4 +166,25 @@ declare const Offcanvas: CompoundedComponent<OffcanvasContainerProps> & {
     Title: CompoundedComponent<OffcanvasProps>;
 };
 
-export { Alert, Badge, BreadCrumb, Button, ButtonGroup, Card, Dropdown, ListGroup, Modal, Nav, Navbar, Offcanvas, useProgrammableAlert };
+type TooltipProps = {
+    placement: "auto" | "top" | "bottom" | "left" | "right";
+    children: React.ReactNode;
+    buttonTitle: string;
+    buttonVariant: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
+} & Omit<OverlayTriggerProps, "children" | "overlay">;
+
+declare const MyTooltip: React.ForwardRefRenderFunction<HTMLElement, TooltipProps>;
+
+declare const useToast: () => readonly [CompoundedComponent<react.HTMLAttributes<HTMLDivElement>>, CompoundedComponent<react.HTMLAttributes<HTMLDivElement>>, CompoundedComponent<react.HTMLAttributes<HTMLDivElement>>, (id: string, autohide: boolean, delay: number, options: unknown) => void];
+
+type PopoverProps = {
+    placement: "auto" | "top" | "bottom" | "left" | "right";
+    title?: string;
+    children: React.ReactNode;
+    buttonTitle: string;
+    buttonVariant: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
+} & Omit<OverlayTriggerProps, "trigger" | "placement" | "children" | "overlay">;
+
+declare const MyPopover: React.ForwardRefRenderFunction<HTMLElement, PopoverProps>;
+
+export { Alert, Badge, BreadCrumb, Button, ButtonGroup, Card, Dropdown, ListGroup, Modal, Nav, Navbar, Offcanvas, MyPopover as Popover, MyTooltip as Tooltip, useProgrammableAlert, useToast };
