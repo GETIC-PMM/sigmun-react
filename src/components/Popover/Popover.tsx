@@ -1,14 +1,14 @@
-import Button from "react-bootstrap/Button";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Popover from "react-bootstrap/Popover";
-import { PopoverProps } from "./types";
+import Button from 'react-bootstrap/Button'
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Popover from 'react-bootstrap/Popover'
+import { PopoverProps } from './types'
 
 const MyPopover: React.ForwardRefRenderFunction<HTMLElement, PopoverProps> = ({
   placement,
   title,
   children,
   buttonTitle,
-  buttonVariant,
+  buttonVariant = 'primary',
   ...props
 }) => {
   return (
@@ -25,7 +25,7 @@ const MyPopover: React.ForwardRefRenderFunction<HTMLElement, PopoverProps> = ({
     >
       <Button variant={buttonVariant}>{buttonTitle}</Button>
     </OverlayTrigger>
-  );
-};
+  )
+}
 
-export default MyPopover;
+export default MyPopover

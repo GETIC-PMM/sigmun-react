@@ -1,11 +1,11 @@
-import { Button, OverlayTrigger, Tooltip } from "react-bootstrap";
-import { TooltipProps } from "./types";
+import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import { TooltipProps } from './types'
 
 const MyTooltip: React.ForwardRefRenderFunction<HTMLElement, TooltipProps> = ({
   placement,
   children,
   buttonTitle,
-  buttonVariant,
+  buttonVariant = 'primary',
   ...props
 }) => {
   return (
@@ -16,7 +16,7 @@ const MyTooltip: React.ForwardRefRenderFunction<HTMLElement, TooltipProps> = ({
     >
       <Button variant={buttonVariant}>{buttonTitle}</Button>
     </OverlayTrigger>
-  );
-};
+  )
+}
 
-export default MyTooltip;
+export default MyTooltip
