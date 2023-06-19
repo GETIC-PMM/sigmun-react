@@ -1,4 +1,4 @@
-export const classList = (...classes: (string | Record<string, boolean>)[]) => {
+export const classList = (...classes: (string | Record<string, any>)[]) => {
   return classes
     .map(c => {
       return typeof c === 'string'
