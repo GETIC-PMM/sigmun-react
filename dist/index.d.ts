@@ -167,23 +167,23 @@ declare const Offcanvas: CompoundedComponent<OffcanvasContainerProps> & {
 };
 
 type TooltipProps = {
-    placement: "auto" | "top" | "bottom" | "left" | "right";
+    placement: 'auto' | 'top' | 'bottom' | 'left' | 'right';
     children: React.ReactNode;
     buttonTitle: string;
-    buttonVariant: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
-} & Omit<OverlayTriggerProps, "children" | "overlay">;
+    buttonVariant?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
+} & Omit<OverlayTriggerProps, 'children' | 'overlay'>;
 
 declare const MyTooltip: React.ForwardRefRenderFunction<HTMLElement, TooltipProps>;
 
 declare const useToast: () => readonly [CompoundedComponent<react.HTMLAttributes<HTMLDivElement>>, CompoundedComponent<react.HTMLAttributes<HTMLDivElement>>, CompoundedComponent<react.HTMLAttributes<HTMLDivElement>>, (id: string, autohide: boolean, delay: number, options: unknown) => void];
 
 type PopoverProps = {
-    placement: "auto" | "top" | "bottom" | "left" | "right";
+    placement: 'auto' | 'top' | 'bottom' | 'left' | 'right';
     title?: string;
     children: React.ReactNode;
     buttonTitle: string;
-    buttonVariant: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
-} & Omit<OverlayTriggerProps, "trigger" | "placement" | "children" | "overlay">;
+    buttonVariant?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
+} & Omit<OverlayTriggerProps, 'trigger' | 'placement' | 'children' | 'overlay'>;
 
 declare const MyPopover: React.ForwardRefRenderFunction<HTMLElement, PopoverProps>;
 
