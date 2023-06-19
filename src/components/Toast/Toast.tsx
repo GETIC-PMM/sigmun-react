@@ -78,9 +78,14 @@ const useToast = () => {
     options: unknown,
   ) => void
 
+  const Toast = Object.assign(ToastContainer, {
+    Header: ToastHeader,
+    Body: ToastBody,
+  })
+
   const showToast = sigmun.functions.showToast as showToastFunction
 
-  return [ToastContainer, ToastHeader, ToastBody, showToast] as const
+  return [Toast, showToast] as const
 }
 
 export default useToast

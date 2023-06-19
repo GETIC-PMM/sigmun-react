@@ -175,7 +175,10 @@ type TooltipProps = {
 
 declare const MyTooltip: React.ForwardRefRenderFunction<HTMLElement, TooltipProps>;
 
-declare const useToast: () => readonly [CompoundedComponent<react.HTMLAttributes<HTMLDivElement>>, CompoundedComponent<react.HTMLAttributes<HTMLDivElement>>, CompoundedComponent<react.HTMLAttributes<HTMLDivElement>>, (id: string, autohide: boolean, delay: number, options: unknown) => void];
+declare const useToast: () => readonly [CompoundedComponent<react.HTMLAttributes<HTMLDivElement>> & {
+    Header: CompoundedComponent<react.HTMLAttributes<HTMLDivElement>>;
+    Body: CompoundedComponent<react.HTMLAttributes<HTMLDivElement>>;
+}, (id: string, autohide: boolean, delay: number, options: unknown) => void];
 
 type PopoverProps = {
     placement: 'auto' | 'top' | 'bottom' | 'left' | 'right';
